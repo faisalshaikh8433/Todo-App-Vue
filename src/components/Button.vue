@@ -1,10 +1,5 @@
 <template>
-  <button
-    :class="buttonClass"
-    class="bg-transparent hover:bg-blue-500 hover:text-white border border-blue-500 hover:border-transparent rounded"
-  >
-    {{ name }}
-  </button>
+  <button :class="buttonClass" @click="$emit('click')">{{ name }}</button>
 </template>
 
 <script>
@@ -15,7 +10,9 @@ export default {
       default: "Add"
     },
     buttonClass: {
-      type: String
+      type: String,
+      default:
+        "bg-transparent hover:bg-green-500 hover:text-white hover:font-semibold border border-green-500 hover:border-transparent rounded p-1 w-full text-sm font-serif"
     }
   }
 };

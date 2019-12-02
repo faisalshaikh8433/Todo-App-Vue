@@ -20,5 +20,10 @@ export const store = {
         value: data
       });
     }
+  },
+  getters: {
+    allTodos: state => {
+      return state.todos;
+    }
   }
 };
