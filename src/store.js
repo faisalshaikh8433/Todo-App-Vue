@@ -1,3 +1,4 @@
+import createPersistedState from "vuex-persistedstate";
 export const store = {
   state: {
     todos: [
@@ -25,5 +26,6 @@ export const store = {
     allTodos: state => {
       return state.todos;
     }
-  }
+  },
+  plugins: [createPersistedState()]
 };

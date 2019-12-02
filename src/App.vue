@@ -8,16 +8,12 @@
 </template>
 
 <script>
-import AllTodos from "./pages/AllTodos.vue";
-// import Button from "./components/Button.vue";
 import Header from "./components/Header.vue";
 
 export default {
   name: "app",
   components: {
-    Header,
-    AllTodos
-    // Button
+    Header
   }
 };
 </script>
