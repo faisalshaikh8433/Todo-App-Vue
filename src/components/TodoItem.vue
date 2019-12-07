@@ -3,9 +3,9 @@
     <span>{{ todo.work }}</span>
     <span>
       <Button
-        name="Edit"
         buttonClass="bg-transparent hover:bg-blue-500 hover:text-white hover:font-semibold border border-blue-500 hover:border-transparent rounded p-1 text-sm font-serif"
-      />
+        >Edit</Button
+      >
     </span>
   </div>
 </template>

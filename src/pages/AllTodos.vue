@@ -2,7 +2,7 @@
   <div class="m-2">
     <TodoItem v-for="todo in allTodos" :todo="todo" :key="todo.id" />
     <Input class="mb-2" v-model="todoText" />
-    <Button @click="handleClick" />
+    <Button @click="handleClick">Add</Button>
   </div>
 </template>
 
@@ -33,14 +33,16 @@ export default {
       //   .catch(() => {
       //     console.log("error appeared");
       //   });
-      this.addNewTodo({ work: this.todoText })
-        .then(() => {
-          console.log("dispatched");
-          this.todoText = "";
-        })
-        .catch(() => {
-          console.log("error appeared");
-        });
+      if (this.todoText != "") {
+        this.addNewTodo({ work: this.todoText })
+          .then(() => {
+            console.log("dispatched");
+            this.todoText = "";
+          })
+          .catch(() => {
+            console.log("error appeared");
+          });
+      }
     }
   },
   computed: {

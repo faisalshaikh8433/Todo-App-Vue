@@ -8,18 +8,25 @@ export const store = {
       {
         work: "I wana Sleep"
       }
-    ]
+    ],
+    userName: ""
   },
   mutations: {
-    addTodo(state, data) {
+    updateTodos(state, data) {
       state.todos = [...state.todos, data.value];
+    },
+    updateUserName(state, data) {
+      state.userName = data;
     }
   },
   actions: {
     addNewTodo({ commit }, data) {
-      commit("addTodo", {
+      commit("updateTodos", {
         value: data
       });
+    },
+    addUserName({ commit }, data) {
+      commit("updateUserName", data);
     }
   },
   getters: {

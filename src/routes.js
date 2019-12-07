@@ -1,10 +1,11 @@
 import AllTodos from "./pages/AllTodos";
+import Index from "./pages/Index";
 
 const routes = [
   {
     path: "/",
     name: "index",
-    component: AllTodos
+    component: Index
   },
   {
     path: "/todos",
