@@ -1,4 +1,6 @@
-# first_vue
+# Todos app in Vue
+
+## Used Vuex, Vue Router and Persisted State in local storage.
 
 ## Project setup
 ```
